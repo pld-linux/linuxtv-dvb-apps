@@ -1,3 +1,4 @@
+# TODO: optflags
 Summary:	DVB apps
 Summary(pl):	Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
@@ -13,10 +14,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_utils	av7110_loadkeys dvbdate dvbnet dvbtraffic lib scan szap
 
 %description
-DVB apps
+DVB apps.
 
 %description -l pl
-Aplikacje dla DVB
+Aplikacje dla DVB.
 
 %prep
 %setup -q
@@ -26,7 +27,7 @@ cd util
 for i in %{_utils}; do
 	%{__make} -C $i
 done
-cd ../
+cd ..
 mv util/av7110_loadkeys/README README.av7110_loadkeys
 mv util/scan/README README.scan
 mv util/szap/README README.szap
@@ -51,12 +52,8 @@ install util/szap/tzap $RPM_BUILD_ROOT%{_bindir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
-
 %files
 %defattr(644,root,root,755)
 %doc util/av7110_loadkeys/*rc5 util/dvbnet/net_start* util/scan/dvb-*/ util/scan/atsc/ util/szap/channels.conf* README* TODO
-
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lnb.o
