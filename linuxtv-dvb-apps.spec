@@ -7,6 +7,9 @@ License:	GPL
 Group:		Applications
 Source0:	http://www.linuxtv.org/downloads/%{name}-%{version}.tar.bz2
 # Source0-md5:	de958cdb8d00e74792dd69f3c945b037
+URL:		http://linuxtv.org/
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
 %define		_utils	av7110_loadkeys dvbdate dvbnet dvbtraffic lib scan szap
 %description
 DVB apps
@@ -45,8 +48,6 @@ install util/szap/szap $RPM_BUILD_ROOT%{_bindir}
 install util/szap/tzap $RPM_BUILD_ROOT%{_bindir}
 
 %clean
-URL:		http://linuxtv.org/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
@@ -54,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc util/av7110_loadkeys/*rc5 util/dvbnet/net_start* util/scan/dvb-*/ util/scan/atsc/ util/szap/channels.conf README* TODO
+%doc util/av7110_loadkeys/*rc5 util/dvbnet/net_start* util/scan/dvb-*/ util/scan/atsc/ util/szap/channels.conf* README* TODO
 
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lnb.0
+%attr(755,root,root) %{_libdir}/lnb.o
