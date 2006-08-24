@@ -2,7 +2,7 @@ Summary:	DVB apps
 Summary(pl):	Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
 Version:	1.1.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://www.linuxtv.org/downloads/%{name}-%{version}.tar.bz2
@@ -11,6 +11,7 @@ URL:		http://linuxtv.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_utils	av7110_loadkeys dvbdate dvbnet dvbtraffic lib scan szap
+
 %description
 DVB apps
 
