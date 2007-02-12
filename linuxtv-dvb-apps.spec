@@ -1,6 +1,6 @@
 # TODO: optflags
 Summary:	DVB apps
-Summary(pl.UTF-8):   Aplikacje dla DVB
+Summary(pl.UTF-8):	Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
 Version:	1.1.1
 Release:	1
