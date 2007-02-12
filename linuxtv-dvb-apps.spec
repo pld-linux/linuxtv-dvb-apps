@@ -1,6 +1,6 @@
 # TODO: optflags
 Summary:	DVB apps
-Summary(pl):	Aplikacje dla DVB
+Summary(pl.UTF-8):   Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
 Version:	1.1.1
 Release:	1
@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DVB apps.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacje dla DVB.
 
 %prep
