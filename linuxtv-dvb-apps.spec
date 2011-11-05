@@ -69,6 +69,9 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir},%{_mandir}/man1}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   libs -p /sbin/ldconfig
+%postun libs -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc alevt lib/libdvbcfg/zapchannel.txt util/dib3000-watch/README.dib3000-watch util/dvbnet/net_start* util/szap/channels-conf README* TODO.libesg
