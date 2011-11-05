@@ -48,8 +48,8 @@ done
 touch util/alevt/alevt.png
 
 %build
+export CFLAGS="-g -Wall -W -Wshadow -Wpointer-arith -Wstrict-prototypes %{rpmcflags}"
 %{__make} \
-	CFLAGS="-g -Wall -W -Wshadow -Wpointer-arith -Wstrict-prototypes %{rpmcflags}" \
 	ttusb_dec_reset=1 \
 	V=1
 
