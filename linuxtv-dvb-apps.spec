@@ -3,7 +3,7 @@ Summary:	DVB apps
 Summary(pl.UTF-8):	Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
 Version:	1.1.1.20111105
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	http://linuxtv.org/hg/dvb-apps/archive/tip.tar.gz
@@ -61,6 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir},%{_mandir}/man1}
 
 %{__make} install \
+	libdir="%{_libdir}" \
 	DESTDIR=$RPM_BUILD_ROOT
 %{__make} install -C util/alevt \
 	DESTDIR=$RPM_BUILD_ROOT
