@@ -3,9 +3,9 @@ Summary:	DVB apps
 Summary(pl.UTF-8):	Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
 Version:	1.1.1.20111105
-Release:	2
+Release:	3
 License:	GPL v2+
-Group:		Applications
+Group:		Applications/System
 Source0:	http://linuxtv.org/hg/dvb-apps/archive/tip.tar.gz
 # Source0-md5:	ff01d8d48f70c258ecd5a7f1485a61c2
 URL:		http://linuxtv.org/
