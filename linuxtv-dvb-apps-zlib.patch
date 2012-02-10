@@ -1,0 +1,10 @@
+--- dvb-apps-69fc03702a64/util/alevt/exp-gfx.c~	2012-01-24 13:29:08.000000000 +0100
++++ dvb-apps-69fc03702a64/util/alevt/exp-gfx.c	2012-02-10 20:39:00.092625593 +0100
+@@ -3,6 +3,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <zlib.h>
+ #include "lang.h"
+ #include "export.h"
+ #include "font.h"

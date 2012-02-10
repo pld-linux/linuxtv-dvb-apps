@@ -2,12 +2,13 @@
 Summary:	DVB apps
 Summary(pl.UTF-8):	Aplikacje dla DVB
 Name:		linuxtv-dvb-apps
-Version:	1.1.1.20111105
-Release:	5
+Version:	1.1.1.20120210
+Release:	1
 License:	GPL v2+
 Group:		Applications/System
 Source0:	http://linuxtv.org/hg/dvb-apps/archive/tip.tar.gz
-# Source0-md5:	ff01d8d48f70c258ecd5a7f1485a61c2
+# Source0-md5:	abe1e41a0bad0292e8af1740fa2c3195
+Patch0:		%{name}-zlib.patch
 URL:		http://linuxtv.org/
 BuildRequires:	libpng-devel
 BuildRequires:	libusb-compat-devel
@@ -67,7 +68,8 @@ Static linuxtv DVB libraries.
 Statyczne biblioteki DVB z projektu linuxtv.
 
 %prep
-%setup -q -n dvb-apps-d4e8bf5658ce
+%setup -q -n dvb-apps-69fc03702a64
+%patch0 -p1
 
 # prepare %doc
 %{__mv} lib/libesg/TODO TODO.libesg
